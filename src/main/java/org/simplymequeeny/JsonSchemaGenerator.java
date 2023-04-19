@@ -28,6 +28,10 @@ public final class JsonSchemaGenerator {
                                         String json) throws IOException {
         return cleanup(outputAsString(title, description, json, null));
     }
+    
+    public static void main(String[] args){
+        System.out.println(JsonSchemaGenerator.outputAsString("Title", "text", args[0]));
+    }
 
     public static void outputAsFile(String title, String description,
                                     String json, String filename) throws IOException {
